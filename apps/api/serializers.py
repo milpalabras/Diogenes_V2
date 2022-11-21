@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Records, Category, MethodOfPayment, Account
+from ..accounting_records.models import Records, Category, MethodOfPayment, Account
 
 class AccountSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
