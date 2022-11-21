@@ -1,5 +1,6 @@
 from accounting_records.models import Category, MethodOfPayment, Records, Account
-from apps.api.serializers import CategorySerializer, MethodOfPaymentSerializer, RecordsSerializer, AccountSerializer
+from apps.api.serializers import CategorySerializer, MethodOfPaymentSerializer, RecordsSerializer, AccountSerializer, UserSerializer
+from django.contrib.auth.models import User
 from rest_framework import generics
 from rest_framework import permissions
 
@@ -57,3 +58,11 @@ class AccountDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = AccountSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
+
+class UserList(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class UserDetail(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
