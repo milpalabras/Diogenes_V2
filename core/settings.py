@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home'  # Enable the inner home (home)
+    'apps.home',  # Enable the inner home (home)
+    #'apps.api', # Enable the inner api (api)
+    'apps.accounting_records', # Enable the inner accounting_records (accounting_records)    
+    'rest_framework',
+    'mptt',
 ]
 
 MIDDLEWARE = [

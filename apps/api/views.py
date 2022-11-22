@@ -1,4 +1,4 @@
-from accounting_records.models import Category, MethodOfPayment, Records, Account
+from apps.accounting_records.models import Category, MethodOfPayment, Records, Account
 from apps.api.serializers import CategorySerializer, MethodOfPaymentSerializer, RecordsSerializer, AccountSerializer, UserSerializer
 from django.contrib.auth.models import User
 from rest_framework import generics

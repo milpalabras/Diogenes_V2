@@ -9,6 +9,8 @@ from django.urls import path, include  # add this
 urlpatterns = [
     path('admin/', admin.site.urls),          # Django admin route
     path("", include("apps.authentication.urls")), # Auth routes - login / register
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include('apps.api.urls')),
 
     # ADD NEW Routes HERE
 
