@@ -276,3 +276,9 @@ cython_debug/
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/django,visualstudiocode,python
+users.json
+records.json
+method_of_payments.json
+customers.json
+categories.json
+account.json
